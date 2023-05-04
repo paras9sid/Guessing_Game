@@ -165,3 +165,53 @@
 // }
 
 // console.log("Congrats! you got the secret");
+
+//for...of loop
+
+// const subreddits = ["cringe", "books", "chickens", "funny", "pics"];
+
+// //normal for loop
+// // for (let i = 0; i < subreddits.length; i++) {
+// //   console.log(`visit reddit.com/r/${subreddits[i]}`);
+// // }
+
+// //for...of loop
+// for (let sub of subreddits) {
+//   console.log(`Visit redditcom/r/${sub}`);
+// }
+
+//strings
+
+// for (let char of "hello world") {
+//   console.log(char);
+// }
+
+//iterating over objects
+
+const testScores = {
+  sid: 100,
+  aasha: 100,
+  rohan: 90,
+  rohit: 80,
+  loky: 99,
+};
+
+// for (let person in testScores) {
+//   console.log(`${person} scored ${testScores[person]}`);
+// }
+
+//summing all scores - integer
+// let total = 0;
+// for (let score of Object.values(testScores)) {
+//   // console.log(score); // will print scores in console
+//   total += score; // print toal in console and enter - toal summ will appear in console
+// }
+
+// let total = 0;
+// let scores = Object.values(testScores);
+// for (let score of scores) {
+//   // console.log(score); // will print scores in console
+//   total += score; // print toal in console and enter - toal summ will appear in console
+// }
+
+// console.log(total / scores.length);
