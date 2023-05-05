@@ -163,3 +163,35 @@
 // const add = function (x, y) {
 //   return x + y;
 // };
+
+//higher order functions
+
+function callTwice(func) {
+  // function as an args in anotehr function
+  func();
+  func();
+}
+//1
+// callTwice(1); // Uncaught TypeError: func is not a function
+
+//2
+// function rollDice() {
+//   const roll = Math.floor(Math.random() * 6) + 1;
+//   console.log(roll);
+// }
+
+// callTwice(rollDice); // calling function in a function as an arg
+
+//3
+function callTenTimes(f) {
+  for (let i = 0; i < 10; i++) {
+    f();
+  }
+}
+
+function rollDice() {
+  const roll = Math.floor(Math.random() * 6) + 1;
+  console.log(roll);
+}
+
+callTwice(rollDice); // calling function in a function as an arg
