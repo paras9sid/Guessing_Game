@@ -57,20 +57,55 @@
 
 //return in function
 
-function add(x, y) {
-  // return x+y;
-  //OR
-  // let sum = x + y;
-  // return sum;
+// function add(x, y) {
+//   // return x+y;
+//   //OR
+//   // let sum = x + y;
+//   // return sum;
 
-  //using conditions
-  if (typeof x !== "number" || typeof y !== "number") {
-    // x and y both has to be numbers for execution
-    return false;
-  }
-  //no need oef else becuase it will go below if abpve stmt is false
-  // let sum = x + y;
-  // return sum;
-  //OR
-  return x + y;
-}
+//   //using conditions
+//   if (typeof x !== "number" || typeof y !== "number") {
+//     // x and y both has to be numbers for execution
+//     return false;
+//   }
+//   //no need oef else becuase it will go below if abpve stmt is false
+//   // let sum = x + y;
+//   // return sum;
+//   //OR
+//   return x + y;
+// }
+
+// scope
+
+// let totalEggs = 0; // global scope
+// function collectEggs() {
+//   // let totalEggs = 6; // scoped inside function only
+//   // console.log(totalEggs); // will print 6
+//   totalEggs = 6; // updated qty of eggs
+// }
+
+// // console.log(totalEggs); // error - Uncaught ReferenceError: totalEggs is not defined
+
+// // collectEggs();
+// // console.log(totalEggs); // Uncaught ReferenceError: totalEggs is not defined
+
+// // after global scope an updation in functional scope
+
+// console.log(totalEggs); // 0 = global scope
+// collectEggs();
+// console.log(totalEggs); // 6 after updation of qty
+
+// let bird = "pigeon";
+
+// function birdWatch() {
+//   // 1
+//   // let bird = "crow";
+//   // console.log(bird); // will print crow
+//   //2
+//   // console.log(bird); // pigeon print
+//   //3
+//   // console.log(bird); // Uncaught ReferenceError: Cannot access 'bird' before initialization
+//   // let bird = "crow";
+// }
+
+// birdWatch();
