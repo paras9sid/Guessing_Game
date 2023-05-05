@@ -135,17 +135,31 @@
 
 //inner function
 
-function bankRobbery() {
-  const heroes = ["Spiderman", "Batman", "Superman"];
-  function forHelp() {
-    function inner() {
-      for (let hero of heroes) {
-        console.log(`Please save us!, ${hero.toLocaleUpperCase()}`); //nothing appear at first have to call fucntion
-      }
-    }
-    inner();
-  }
-  forHelp(); //nothing printed
-}
+// function bankRobbery() {
+//   const heroes = ["Spiderman", "Batman", "Superman"];
+//   function forHelp() {
+//     function inner() {
+//       for (let hero of heroes) {
+//         console.log(`Please save us!, ${hero.toLocaleUpperCase()}`); //nothing appear at first have to call fucntion
+//       }
+//     }
+//     inner();
+//   }
+//   forHelp(); //nothing printed
+// }
 
 // bankRobbery(); // all 3name printed.
+
+//function expressions
+
+//normal function
+
+// function add(x, y) {
+//   return x + y;
+// }
+
+//above function converted to function expression
+
+// const add = function (x, y) {
+//   return x + y;
+// };
