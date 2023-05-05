@@ -183,15 +183,45 @@ function callTwice(func) {
 // callTwice(rollDice); // calling function in a function as an arg
 
 //3
-function callTenTimes(f) {
-  for (let i = 0; i < 10; i++) {
-    f();
+// function callTenTimes(f) {
+//   for (let i = 0; i < 10; i++) {
+//     f();
+//   }
+// }
+
+// function rollDice() {
+//   const roll = Math.floor(Math.random() * 6) + 1;
+//   console.log(roll);
+// }
+
+// callTwice(rollDice); // calling function in a function as an arg
+
+//higher order function - returning a function
+
+function makeMystery() {
+  const rand = Math.random();
+  if (rand > 0.5) {
+    return function () {
+      console.log("Congrats,return function ok");
+    };
+  } else {
+    return function () {
+      alert("not working returning function");
+    };
   }
 }
 
-function rollDice() {
-  const roll = Math.floor(Math.random() * 6) + 1;
-  console.log(roll);
+function makeBetweenFunc(min, max) {
+  return function (num) {
+    return num >= min && num <= max;
+  };
 }
 
-callTwice(rollDice); // calling function in a function as an arg
+const isChild = makeBetweenFunc(0, 18);
+const isAdult = makeBetweenFunc(19, 64);
+
+// function isBetween(num) {
+//   return num >= 50 && num <= 100;
+// }
+
+// makeBetweenFunc(50, 100);
