@@ -109,3 +109,43 @@
 // }
 
 // birdWatch();
+
+// //block scope
+// let radius = 8;
+// if (radius > 0) {
+//   const PI = 3.14159;
+//   let msg = "Hi";
+// }
+
+// console.log(radius); // 8
+// // console.log(PI); // Uncaught ReferenceError: PI is not defined
+// // console.log(msg); // Uncaught ReferenceError: msg is not defined
+
+// function bankRobbery() {
+//   const heroes = ["Spiderman", "Batman", "Superman"];
+//   function forHelp() {
+//     for (let hero of heroes) {
+//       console.log(`Please save us!, ${hero.toLocaleUpperCase()}`); //nothing appear at first have to call fucntion
+//     }
+//   }
+//   forHelp(); //nothing printed
+// }
+
+// // bankRobbery(); // all 3name printed.
+
+//inner function
+
+function bankRobbery() {
+  const heroes = ["Spiderman", "Batman", "Superman"];
+  function forHelp() {
+    function inner() {
+      for (let hero of heroes) {
+        console.log(`Please save us!, ${hero.toLocaleUpperCase()}`); //nothing appear at first have to call fucntion
+      }
+    }
+    inner();
+  }
+  forHelp(); //nothing printed
+}
+
+// bankRobbery(); // all 3name printed.
