@@ -38,19 +38,39 @@
 
 // function with 2 args
 
-function greet(firstName, lastName) {
-  // console.log(`hey there! ${firstName} ${lastName}`);
-  console.log(`hey there! ${firstName} ${lastName[0]}.`);
-}
+// function greet(firstName, lastName) {
+//   // console.log(`hey there! ${firstName} ${lastName}`);
+//   console.log(`hey there! ${firstName} ${lastName}.`);
+// }
 
-greet("Sid", "Jain");
+// greet("Sid", "Jain");
 
-//repeat function
+// //repeat function
 
-function repeat(str, numTimes) {
-  let result = "";
-  for (let i = 0; i < numTimes; i++) {
-    result += str;
+// function repeat(str, numTimes) {
+//   let result = "";
+//   for (let i = 0; i < numTimes; i++) {
+//     result += str;
+//   }
+//   console.log(result);
+// }
+
+//return in function
+
+function add(x, y) {
+  // return x+y;
+  //OR
+  // let sum = x + y;
+  // return sum;
+
+  //using conditions
+  if (typeof x !== "number" || typeof y !== "number") {
+    // x and y both has to be numbers for execution
+    return false;
   }
-  console.log(result);
+  //no need oef else becuase it will go below if abpve stmt is false
+  // let sum = x + y;
+  // return sum;
+  //OR
+  return x + y;
 }
