@@ -1,10 +1,10 @@
 // for each
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-function print(element) {
-  console.log(element);
-}
+// function print(element) {
+//   console.log(element);
+// }
 
 // //individual element print
 // print(numbers[0]); // 1
@@ -35,6 +35,35 @@ function print(element) {
 //   }
 // });
 
+// const movies = [
+//   {
+//     title: "hello",
+//     score: 99,
+//   },
+//   {
+//     title: "new",
+//     score: 23,
+//   },
+//   {
+//     title: "para",
+//     score: 81,
+//   },
+// ];
+
+// //90/100
+
+// movies.forEach(function (movie) {
+//   console.log(`${movie.title} - ${movie.score}/100`);
+// });
+
+//map method
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const doubles = numbers.map(function (num) {
+  return num * 2; // ans = [2, 4, 6, 8, 10, 12, 14, 16, 18]
+});
+
 const movies = [
   {
     title: "hello",
@@ -50,8 +79,8 @@ const movies = [
   },
 ];
 
-//90/100
-
-movies.forEach(function (movie) {
-  console.log(`${movie.title} - ${movie.score}/100`);
+const title = movies.map(function (movie) {
+  //   return movie.title;
+  //   return movie.title.toLocaleUpperCase();
+  return movie;
 });

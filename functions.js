@@ -225,3 +225,38 @@ const isAdult = makeBetweenFunc(19, 64);
 // }
 
 // makeBetweenFunc(50, 100);
+
+//arrow functions
+
+//normal function expression
+// const add = function (x, y) {
+//   return x * y;
+// };
+
+//converted into arrow function  -- saved into some variable, cant be used directly
+const addArrow = (x, y) => x * y;
+
+// const movies = [
+//   {
+//     title: "hello",
+//     score: 99,
+//   },
+//   {
+//     title: "new",
+//     score: 23,
+//   },
+//   {
+//     title: "para",
+//     score: 81,
+//   },
+// ];
+
+// const title = movies.map(function (movie) {
+//   return movie;
+// });
+
+const rollDie = () => {
+  return Math.floor(Math.random() * 6) + 1;
+};
+
+///implicit returns in arrow function
