@@ -255,8 +255,14 @@ const addArrow = (x, y) => x * y;
 //   return movie;
 // });
 
-const rollDie = () => {
-  return Math.floor(Math.random() * 6) + 1;
-};
+// const rollDie = () => {
+//   return Math.floor(Math.random() * 6) + 1;
+// };
 
-///implicit returns in arrow function
+//implicit returns in arrow function
+// const rollDie = () => (
+// Math.floor(Math.random() * 6) + 1
+// );
+
+//one liner w./o () parens
+const rollDie2 = () => Math.floor(Math.random() * 6) + 1;
