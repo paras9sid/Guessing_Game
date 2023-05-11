@@ -59,13 +59,18 @@
 // console.log("After try catch stmt ex"); // execurted and prints After try catch stmt ex -- code doesnt stop
 
 //filter method
-const nums = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+// const nums = [9, 8, 7, 6, 5, 4, 3, 2, 1];
 
-const odd = nums.filter((n) => {
-  return n % 2 === 1;
-});
+// const odd = nums.filter((n) => {
+//   return n % 2 === 1;
+// });
 
-const smallNums = nums.filter((n) => n < 5);
+// const smallNums = nums.filter((n) => n < 5);
 
 // console.log("", odd);
 // console.log(smallNums);
+
+//reduce mthod
+const egReduce = [3, 5, 7, 9, 11].reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+});
