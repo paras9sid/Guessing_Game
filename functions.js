@@ -166,11 +166,11 @@
 
 //higher order functions
 
-function callTwice(func) {
-  // function as an args in anotehr function
-  func();
-  func();
-}
+// function callTwice(func) {
+//   // function as an args in anotehr function
+//   func();
+//   func();
+// }
 //1
 // callTwice(1); // Uncaught TypeError: func is not a function
 
@@ -198,27 +198,27 @@ function callTwice(func) {
 
 //higher order function - returning a function
 
-function makeMystery() {
-  const rand = Math.random();
-  if (rand > 0.5) {
-    return function () {
-      console.log("Congrats,return function ok");
-    };
-  } else {
-    return function () {
-      alert("not working returning function");
-    };
-  }
-}
+// function makeMystery() {
+//   const rand = Math.random();
+//   if (rand > 0.5) {
+//     return function () {
+//       console.log("Congrats,return function ok");
+//     };
+//   } else {
+//     return function () {
+//       alert("not working returning function");
+//     };
+//   }
+// }
 
-function makeBetweenFunc(min, max) {
-  return function (num) {
-    return num >= min && num <= max;
-  };
-}
+// function makeBetweenFunc(min, max) {
+//   return function (num) {
+//     return num >= min && num <= max;
+//   };
+// }
 
-const isChild = makeBetweenFunc(0, 18);
-const isAdult = makeBetweenFunc(19, 64);
+// const isChild = makeBetweenFunc(0, 18);
+// const isAdult = makeBetweenFunc(19, 64);
 
 // function isBetween(num) {
 //   return num >= 50 && num <= 100;
@@ -234,7 +234,7 @@ const isAdult = makeBetweenFunc(19, 64);
 // };
 
 //converted into arrow function  -- saved into some variable, cant be used directly
-const addArrow = (x, y) => x * y;
+// const addArrow = (x, y) => x * y;
 
 // const movies = [
 //   {
@@ -265,4 +265,31 @@ const addArrow = (x, y) => x * y;
 // );
 
 //one liner w./o () parens
-const rollDie2 = () => Math.floor(Math.random() * 6) + 1;
+// const rollDie2 = () => Math.floor(Math.random() * 6) + 1;
+
+//setTimeout
+//1
+// setTimeout(() => {
+//   console.log("hello");
+// }, 3000);
+
+//2
+// console.log("hello");
+// setTimeout(() => {
+//   console.log(" are you there?");
+// }, 2000);
+
+// console.log("goodbye!");
+
+//setInterval
+//1 - infinite - no stopping
+// setInterval(() => {
+//   console.log(Math.random());
+// },2000);
+
+//setInterval - with stopping criteria
+const id = setInterval(() => {
+  console.log(Math.random());
+}, 2000);
+
+//clearInterval(id) - to stop above function setInterval()
