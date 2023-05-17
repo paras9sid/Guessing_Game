@@ -355,8 +355,33 @@
 // const aeline = { legs: 2, family: "aew" };
 
 //rest operator
-function raceResults(gold, silver, ...everyoneElse) {
-  console.log(`Gold medal goes to : ${gold}`);
-  console.log(`Silver medal goes to : ${silver}`);
-  console.log(`Ret all thankyou for paricipating: ${everyoneElse}`);
-}
+// function raceResults(gold, silver, ...everyoneElse) {
+//   console.log(`Gold medal goes to : ${gold}`);
+//   console.log(`Silver medal goes to : ${silver}`);
+//   console.log(`Ret all thankyou for paricipating: ${everyoneElse}`);
+// }
+
+//destructuring arrays
+// const scores = [92932, 4567, 13465, 46573, 87645];
+
+// //old method of assigning values into new variable
+// const highScore1 = scores[0];
+// const secondHighScore = scores[1];
+
+// //destructuring directly
+// // const [gold, silver] = scores; // assigned scroes[0],scores[1] to gold & silver res.
+
+//eg 2
+
+const raceResults = ["Elice", "Feyia", "Gandhi"];
+
+const [gold, silver, bronze] = raceResults;
+// gold; // 'Elice'
+// silver-Feyia
+//bronze--gandhi
+
+const [fastest, ...everyoneElse] = raceResults;
+//fastest-elice
+// everyoneElse -- (2) ['Feyia', 'Gandhi']
+
+//Object destructuring
