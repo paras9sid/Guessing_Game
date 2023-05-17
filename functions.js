@@ -330,3 +330,14 @@ function greet2(person, msg = "hello there") {
 }
 
 //if we provide values in msg above then default value provided will be over rided.
+
+//spread operator
+Math.max(12, 64654, 6878946354); //ans - 6878946354
+const nums = [12, 64654, 6878946354];
+Math.max(nums); //NaN
+
+//using spread op = ...
+Math.max(...nums); // ans - 6878946354
+
+const nums2 = [4, 9, 1];
+Math.min(...nums2); //ans = 1
