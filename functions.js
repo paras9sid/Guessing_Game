@@ -312,32 +312,44 @@
 
 //3  with default values/params with order
 
-function rollDie(numSides = 6) {
-  // with default value provided above so NaN will not come in output
-  return Math.floor(Math.random() * numSides) + 1;
-}
+// function rollDie(numSides = 6) {
+//   // with default value provided above so NaN will not come in output
+//   return Math.floor(Math.random() * numSides) + 1;
+// }
 
-//
-function greet(msg, person) {
-  console.log(`${msg} , ${person}`);
-}
+// //
+// function greet(msg, person) {
+//   console.log(`${msg} , ${person}`);
+// }
 
-//order matters while providing default values
-// function greet2(msg = "hello there", person) {
-function greet2(person, msg = "hello there") {
-  //default parameters comes first in order
-  console.log(`${msg}, ${person}`);
-}
+// //order matters while providing default values
+// // function greet2(msg = "hello there", person) {
+// function greet2(person, msg = "hello there") {
+//   //default parameters comes first in order
+//   console.log(`${msg}, ${person}`);
+// }
 
-//if we provide values in msg above then default value provided will be over rided.
+// //if we provide values in msg above then default value provided will be over rided.
 
-//spread operator
+// //spread operator
 Math.max(12, 64654, 6878946354); //ans - 6878946354
 const nums = [12, 64654, 6878946354];
 Math.max(nums); //NaN
 
-//using spread op = ...
+// //using spread op = ...
 Math.max(...nums); // ans - 6878946354
 
 const nums2 = [4, 9, 1];
 Math.min(...nums2); //ans = 1
+
+//spread with array literals
+const cats = ["Blue", "Scout"];
+const dogs = ["Boxer", "Olee"];
+
+const allPets = [...cats, ...dogs];
+
+//spread with Objects
+
+const denine = { legs: 3, family: "canine" };
+
+const aeline = { legs: 2, family: "aew" };
