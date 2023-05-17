@@ -385,3 +385,30 @@ const [fastest, ...everyoneElse] = raceResults;
 // everyoneElse -- (2) ['Feyia', 'Gandhi']
 
 //Object destructuring
+
+const user = {
+  email: "he@gmail.com",
+  password: "hello12434",
+  firstName: "sid",
+  lastName: "jain",
+  born: 1987,
+  bio: "billionaire trader",
+  city: "Delhi",
+  country: "India",
+};
+
+// //single out old method
+// const firstName = user.firstName;
+// const lastName = user.lastName;
+
+//destructure
+// const { email, password, firstName, lastName } = user; //firstName lastName destructured in single line and order doesnt matter
+
+//name of property to change or call by another name
+// const { born } = user;
+
+//rename
+const { born: birthYear } = user; // born changed to birthYear now
+
+//default values provided
+const { firstName = "Sid" } = user;
