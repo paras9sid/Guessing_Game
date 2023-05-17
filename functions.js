@@ -332,24 +332,31 @@
 // //if we provide values in msg above then default value provided will be over rided.
 
 // //spread operator
-Math.max(12, 64654, 6878946354); //ans - 6878946354
-const nums = [12, 64654, 6878946354];
-Math.max(nums); //NaN
+// Math.max(12, 64654, 6878946354); //ans - 6878946354
+// const nums = [12, 64654, 6878946354];
+// Math.max(nums); //NaN
 
-// //using spread op = ...
-Math.max(...nums); // ans - 6878946354
+// // //using spread op = ...
+// Math.max(...nums); // ans - 6878946354
 
-const nums2 = [4, 9, 1];
-Math.min(...nums2); //ans = 1
+// const nums2 = [4, 9, 1];
+// Math.min(...nums2); //ans = 1
 
-//spread with array literals
-const cats = ["Blue", "Scout"];
-const dogs = ["Boxer", "Olee"];
+// //spread with array literals
+// const cats = ["Blue", "Scout"];
+// const dogs = ["Boxer", "Olee"];
 
-const allPets = [...cats, ...dogs];
+// const allPets = [...cats, ...dogs];
 
-//spread with Objects
+// //spread with Objects
 
-const denine = { legs: 3, family: "canine" };
+// const denine = { legs: 3, family: "canine" };
 
-const aeline = { legs: 2, family: "aew" };
+// const aeline = { legs: 2, family: "aew" };
+
+//rest operator
+function raceResults(gold, silver, ...everyoneElse) {
+  console.log(`Gold medal goes to : ${gold}`);
+  console.log(`Silver medal goes to : ${silver}`);
+  console.log(`Ret all thankyou for paricipating: ${everyoneElse}`);
+}
