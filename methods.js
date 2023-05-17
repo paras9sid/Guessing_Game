@@ -70,7 +70,35 @@
 // console.log("", odd);
 // console.log(smallNums);
 
-//reduce mthod
-const egReduce = [3, 5, 7, 9, 11].reduce((accumulator, currentValue) => {
-  return accumulator + currentValue;
-});
+// //reduce mthod
+// const egReduce = [3, 5, 7, 9, 11].reduce((accumulator, currentValue) => {
+//   return accumulator + currentValue;
+// });
+
+//arrow functions & this
+
+//1 normal function
+const person = {
+  firstName: "Sid",
+  secondName: "Jain",
+  fullName: function () {
+    return `${this.firstName} ${this.secondName}`;
+  },
+};
+
+//output - person.fullName() -> 'Sid Jain'
+
+//2 - arrow function fullName
+const person2 = {
+  firstName: "Sid",
+  secondName: "Jain",
+  fullName: () => {
+    console.log(this);
+    return `${this.firstName} ${this.secondName}`;
+  },
+};
+
+//output - person2.fullName() -> 'undefined undefined'
+//this keyword in arrow funtion refer to the scope in function fullName only not in object person
+//this refers to - window object by checking - console.log(this) inside arrow function
+//console.log(this); -> output -> Window {window: Window, self: Window, document: document, name: '', location: Location, …}

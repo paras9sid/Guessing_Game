@@ -288,8 +288,45 @@
 // },2000);
 
 //setInterval - with stopping criteria
-const id = setInterval(() => {
-  console.log(Math.random());
-}, 2000);
+// const id = setInterval(() => {
+//   console.log(Math.random());
+// }, 2000);
 
 //clearInterval(id) - to stop above function setInterval()
+
+//default params
+//1
+// function rollDie(numSides) {
+//   return Math.floor(Math.random() * numSides) + 1;
+// }
+
+//if we dont netr number in paranthesis - it will give Nan as answer as it is undefined
+
+//2
+// function rollDie(numSides) {
+//   if (numSides === undefined) {
+//     numSides = 6; // will print number till 6 when rolldie() - no number in paranthesis
+//   }
+//   return Math.floor(Math.random() * numSides) + 1;
+// }
+
+//3  with default values/params with order
+
+function rollDie(numSides = 6) {
+  // with default value provided above so NaN will not come in output
+  return Math.floor(Math.random() * numSides) + 1;
+}
+
+//
+function greet(msg, person) {
+  console.log(`${msg} , ${person}`);
+}
+
+//order matters while providing default values
+// function greet2(msg = "hello there", person) {
+function greet2(person, msg = "hello there") {
+  //default parameters comes first in order
+  console.log(`${msg}, ${person}`);
+}
+
+//if we provide values in msg above then default value provided will be over rided.
