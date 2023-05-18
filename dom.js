@@ -30,3 +30,9 @@
 // for (let link of links) {
 //   console.log(link.href);
 // }
+
+// //
+// const allLinks = document.querySelectorAll("a");
+// for (let link of allLinks) {
+//   link.innerText = "I AM A LINK";
+// }
