@@ -397,18 +397,34 @@ const user = {
   country: "India",
 };
 
-// //single out old method
-// const firstName = user.firstName;
-// const lastName = user.lastName;
+// // //single out old method
+// // const firstName = user.firstName;
+// // const lastName = user.lastName;
 
-//destructure
-// const { email, password, firstName, lastName } = user; //firstName lastName destructured in single line and order doesnt matter
+// //destructure
+// // const { email, password, firstName, lastName } = user; //firstName lastName destructured in single line and order doesnt matter
 
-//name of property to change or call by another name
-// const { born } = user;
+// //name of property to change or call by another name
+// // const { born } = user;
 
-//rename
-const { born: birthYear } = user; // born changed to birthYear now
+// //rename
+// const { born: birthYear } = user; // born changed to birthYear now
 
-//default values provided
-const { firstName = "Sid" } = user;
+// //default values provided
+// const { firstName = "Sid" } = user;
+
+//destructirng params
+// function fullName(user) {
+//   return `${user.firstName} ${user.lastName}`;
+// }
+
+//2 - destructure
+// function fullName(user) {
+//   //destructure
+//   const { firstName, lastName } = user;
+//   return `${firstName} ${lastName}`;
+// }
+
+function fullName({ firstName, lastName }) {
+  return `${firstName} ${lastName}`;
+}
