@@ -78,18 +78,23 @@
 
 // h1.after(h3);
 
-//removeChild
-const firstLi = document.querySelector("li");
+// //removeChild
+// const firstLi = document.querySelector("li");
 
-const ul = firstLi.parentElement;
+// const ul = firstLi.parentElement;
 
-ul.removeChild(firstLi);
+// ul.removeChild(firstLi);
 
-const b = document.querySelector("b");
+// const b = document.querySelector("b");
 
-b.parentElement.removeChild(b);
+// b.parentElement.removeChild(b);
 
-//remove
+// //remove
 
-const image = document.querySelector("img");
-image.remove();
+// const image = document.querySelector("img");
+// image.remove();
+
+//pokemon
+
+const baseURL =
+  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
