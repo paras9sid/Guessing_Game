@@ -62,38 +62,75 @@
 //   h2.innerText = newColor;
 // });
 
-const randomColor = () => {
-  //random bg colors genration
-  const r = Math.floor(Math.random() * 255);
-  const g = Math.floor(Math.random() * 255);
-  const b = Math.floor(Math.random() * 255);
-  return `rgb(${r},${g},${b})`;
-};
+// const randomColor = () => {
+//   //random bg colors genration
+//   const r = Math.floor(Math.random() * 255);
+//   const g = Math.floor(Math.random() * 255);
+//   const b = Math.floor(Math.random() * 255);
+//   return `rgb(${r},${g},${b})`;
+// };
 
-// button events - this keyword //2
+// // button events - this keyword //2
 
-const buttons = document.querySelectorAll("button");
-for (let button of buttons) {
-  // button.addEventListener("click", () => {
-  //   // console.log("CLICKED!");
-  //   //change color after clicking random button on web page
-  //   button.style.backgroundColor = randomColor(); //change color of button background
-  //   button.style.color = randomColor(); // change color of text inside buytton
-  // });
-  button.addEventListener("click", colorize); // this keyword
-}
+// const buttons = document.querySelectorAll("button");
+// for (let button of buttons) {
+//   // button.addEventListener("click", () => {
+//   //   // console.log("CLICKED!");
+//   //   //change color after clicking random button on web page
+//   //   button.style.backgroundColor = randomColor(); //change color of button background
+//   //   button.style.color = randomColor(); // change color of text inside buytton
+//   // });
+//   button.addEventListener("click", colorize); // this keyword
+// }
 
-const h1s = document.querySelectorAll("h1");
-for (let h1 of h1s) {
-  // h1.addEventListener("click", () => {
-  //   h1.style.backgroundColor = randomColor(); // change coloe of h1 div background
-  //   h1.style.color = randomColor(); //change color of text h1
-  // });
-  h1.addEventListener("click", colorize); // this keyword
-}
+// const h1s = document.querySelectorAll("h1");
+// for (let h1 of h1s) {
+//   // h1.addEventListener("click", () => {
+//   //   h1.style.backgroundColor = randomColor(); // change coloe of h1 div background
+//   //   h1.style.color = randomColor(); //change color of text h1
+//   // });
+//   h1.addEventListener("click", colorize); // this keyword
+// }
 
-// /this keyword help
-function colorize() {
-  this.style.backgroundColor = randomColor();
-  this.style.color = randomColor();
-}
+// // /this keyword help
+// function colorize() {
+//   this.style.backgroundColor = randomColor();
+//   this.style.color = randomColor();
+// }
+
+// keyboard events
+const btn = document.querySelector("button");
+btn.addEventListener("click", (event) => {
+  console.log(event);
+  // alert("click");
+});
+
+// const input = document.querySelector("input");
+// input.addEventListener("keydown", () => {
+//   console.log("Keydown");
+// });
+
+// input.addEventListener("keyup", (e) => {
+//   // console.log(e);
+//   console.log(e.key);
+//   console.log(e.code);
+// });
+
+window.addEventListener("keydown", (e) => {
+  switch (e.code) {
+    case "ArrowUp":
+      console.log("UP!");
+      break;
+    case "ArrowDown":
+      console.log("down");
+      break;
+    case "ArrowLeft":
+      console.log("left");
+      break;
+    case "ArrowRight":
+      console.log("right");
+      break;
+    default:
+      console.log("IGNORED!");
+  }
+});
