@@ -49,18 +49,18 @@
 // button.addEventListener("click", shout);
 
 //random color changer
-const button = document.querySelector("button");
-const h1 = document.querySelector("h1");
+// const button = document.querySelector("button");
+// const h2 = document.querySelector("h2");
 
-button.addEventListener("click", () => {
-  //   console.log("clicked");
-  //body coor change upon button click
-  //   document.body.style.backgroundColor = "olive";
+// button.addEventListener("click", () => {
+//   console.log("clicked");
+//body coor change upon button click
+//   document.body.style.backgroundColor = "olive";
 
-  const newColor = randomColor();
-  document.body.style.backgroundColor = newColor;
-  h1.innerText = newColor;
-});
+//   const newColor = randomColor();
+//   document.body.style.backgroundColor = newColor;
+//   h2.innerText = newColor;
+// });
 
 const randomColor = () => {
   //random bg colors genration
@@ -69,3 +69,23 @@ const randomColor = () => {
   const b = Math.floor(Math.random() * 255);
   return `rgb(${r},${g},${b})`;
 };
+
+// button events - this keyword //2
+
+const buttons = document.querySelectorAll("button");
+for (let button of buttons) {
+  button.addEventListener("click", () => {
+    // console.log("CLICKED!");
+    //change color after clicking random button on web page
+    button.style.backgroundColor = randomColor(); //change color of button background
+    button.style.color = randomColor(); // change color of text inside buytton
+  });
+}
+
+const h1s = document.querySelectorAll("h1");
+for (let h1 of h1s) {
+  h1.addEventListener("click", () => {
+    h1.style.backgroundColor = randomColor(); // change coloe of h1 div background
+    h1.style.color = randomColor(); //change color of text h1
+  });
+}
