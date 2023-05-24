@@ -74,18 +74,26 @@ const randomColor = () => {
 
 const buttons = document.querySelectorAll("button");
 for (let button of buttons) {
-  button.addEventListener("click", () => {
-    // console.log("CLICKED!");
-    //change color after clicking random button on web page
-    button.style.backgroundColor = randomColor(); //change color of button background
-    button.style.color = randomColor(); // change color of text inside buytton
-  });
+  // button.addEventListener("click", () => {
+  //   // console.log("CLICKED!");
+  //   //change color after clicking random button on web page
+  //   button.style.backgroundColor = randomColor(); //change color of button background
+  //   button.style.color = randomColor(); // change color of text inside buytton
+  // });
+  button.addEventListener("click", colorize); // this keyword
 }
 
 const h1s = document.querySelectorAll("h1");
 for (let h1 of h1s) {
-  h1.addEventListener("click", () => {
-    h1.style.backgroundColor = randomColor(); // change coloe of h1 div background
-    h1.style.color = randomColor(); //change color of text h1
-  });
+  // h1.addEventListener("click", () => {
+  //   h1.style.backgroundColor = randomColor(); // change coloe of h1 div background
+  //   h1.style.color = randomColor(); //change color of text h1
+  // });
+  h1.addEventListener("click", colorize); // this keyword
+}
+
+// /this keyword help
+function colorize() {
+  this.style.backgroundColor = randomColor();
+  this.style.color = randomColor();
 }
