@@ -116,21 +116,31 @@ btn.addEventListener("click", (event) => {
 //   console.log(e.code);
 // });
 
-window.addEventListener("keydown", (e) => {
-  switch (e.code) {
-    case "ArrowUp":
-      console.log("UP!");
-      break;
-    case "ArrowDown":
-      console.log("down");
-      break;
-    case "ArrowLeft":
-      console.log("left");
-      break;
-    case "ArrowRight":
-      console.log("right");
-      break;
-    default:
-      console.log("IGNORED!");
-  }
+// window.addEventListener("keydown", (e) => {
+//   switch (e.code) {
+//     case "ArrowUp":
+//       console.log("UP!");
+//       break;
+//     case "ArrowDown":
+//       console.log("down");
+//       break;
+//     case "ArrowLeft":
+//       console.log("left");
+//       break;
+//     case "ArrowRight":
+//       console.log("right");
+//       break;
+//     default:
+//       console.log("IGNORED!");
+//   }
+// });
+
+//form events
+const form = document.querySelector("#shelterForm");
+form.addEventListener("submit", (e) => {
+  // console.log("Submitted!");
+
+  //preventing default behaviour
+  e.preventDefault();
+  console.log("Submitted!");
 });
