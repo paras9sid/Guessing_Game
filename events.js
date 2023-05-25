@@ -147,22 +147,83 @@
 
 //2
 
-const form = document.querySelector("#shelterForm");
-//extracting data out of input
-const input = document.querySelector("#catName");
-//list calling
-const list = document.querySelector("#cats");
-form.addEventListener("submit", (e) => {
-  e.preventDefault(); //stopping from going to new url in form action
-  // console.log("Submitted!");
-  // console.log(input.value);
+// const form = document.querySelector("#shelterForm");
+// //extracting data out of input
+// const input = document.querySelector("#catName");
+// //list calling
+// const list = document.querySelector("#cats");
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault(); //stopping from going to new url in form action
+//   // console.log("Submitted!");
+//   // console.log(input.value);
 
-  //adding values in list below
-  const catName = input.value;
-  const newLi = document.createElement("LI");
-  newLi.innerText = catName; // input value as text i newLis element created li
-  // console.log(newLi);
-  list.append(newLi); // will insert value of input in li below
-  input.value = ""; //value as empty strng after submission- old value in input box gone
-  console.log(`${catName} not available`);
+//   //adding values in list below
+//   const catName = input.value;
+//   const newLi = document.createElement("LI");
+//   newLi.innerText = catName; // input value as text i newLis element created li
+//   // console.log(newLi);
+//   list.append(newLi); // will insert value of input in li below
+//   // input.value = ""; //value as empty strng after submission- old value in input box gone
+//   //
+//   form.reset();
+//   console.log(`${catName} not available`);
+// });
+
+// const form = document.querySelector("form");
+
+// const quan = document.querySelector("#qty");
+// const product = document.querySelector("#product");
+
+// const list = document.querySelector("#list");
+
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   console.log("fome submit check"); // ok
+
+//   const pro = product.value;
+//   const qy = quan.value;
+//   console.log(pro, qy);
+
+//   const newLi = document.createElement("li");
+//   newLi.innerText = `${qy} ${pro}`;
+
+//   list.append(newLi);
+
+//   form.reset();
+// });
+
+// //
+// const input = document.querySelector("input");
+// const h1 = document.querySelector("h1");
+// //change event
+// // input.addEventListener("change", (e) => {
+// //   // console.log("Input Event");
+// //   h1.innerText = input.value; // will not change value in change event
+// //   // console.log(e);
+// // });
+
+// //input event
+// input.addEventListener("input", (e) => {
+//   // console.log("Input Event");
+//   h1.innerText = input.value;
+//   // console.log(e);
+// });
+
+//2
+const container = document.querySelector("#container");
+const button = document.querySelector("#changeColor");
+button.addEventListener("click", (e) => {
+  container.style.backgroundColor = makeRandomColor();
+  e.stopPropagation(); // will stop hide class effect and stop event bubbling
 });
+
+container.addEventListener("click", (e) => {
+  container.classList.toggle("hide");
+});
+
+const makeRandomColor = () => {
+  const r = Math.floor(Math.random() * 255);
+  const g = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
+  return `rgb(${r}, ${g}, ${b})`;
+};
