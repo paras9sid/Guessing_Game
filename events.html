@@ -12,7 +12,7 @@
     </style>
   </head>
   <body>
-    <section onclick="alert('section clicked')">
+    <!-- <section onclick="alert('section clicked')">
       <p onclick="alert('para clicked')">
         I am a para:
         <button onclick="alert('click me')">Click me</button>
@@ -22,7 +22,21 @@
     <div id="container">
       Click to Hide:
       <button id="changeColor">change Color</button>
-    </div>
+    </div> -->
+
+    <h1>Event Delegation</h1>
+    <form action="/dogs" id="tweetForm">
+      <input type="text" name="username" placeholder="username" id="username" />
+      <input type="text" name="tweet" placeholder="tweet" id="tweet" />
+      <button>Post Tweet</button>
+    </form>
+
+    <h2>Tweets</h2>
+    <ul id="tweets">
+      <li>I am LI!!!</li>
+
+      <p>dadadadadad</p>
+    </ul>
     <script src="events.js"></script>
   </body>
 </html>

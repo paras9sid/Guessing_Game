@@ -210,20 +210,63 @@
 // });
 
 //2
-const container = document.querySelector("#container");
-const button = document.querySelector("#changeColor");
-button.addEventListener("click", (e) => {
-  container.style.backgroundColor = makeRandomColor();
-  e.stopPropagation(); // will stop hide class effect and stop event bubbling
+// const container = document.querySelector("#container");
+// const button = document.querySelector("#changeColor");
+// button.addEventListener("click", (e) => {
+//   container.style.backgroundColor = makeRandomColor();
+//   e.stopPropagation(); // will stop hide class effect and stop event bubbling
+// });
+
+// container.addEventListener("click", (e) => {
+//   container.classList.toggle("hide");
+// });
+
+// const makeRandomColor = () => {
+//   const r = Math.floor(Math.random() * 255);
+//   const g = Math.floor(Math.random() * 255);
+//   const b = Math.floor(Math.random() * 255);
+//   return `rgb(${r}, ${g}, ${b})`;
+// };
+
+//tweet
+
+//looping - event delegation method
+
+// const lis = document.querySelectorAll("li");
+// for (let li of lis) {
+//   li.addEventListener("click", () => {
+//     li.remove(); // onlu removing default lis in html file ul list - ot removing new appended tweets
+//   });
+// }
+
+//setup total for rendering vlaues in list
+const tweetForm = document.querySelector("#tweetForm");
+const tweetsContainer = document.querySelector("#tweets");
+const username = document.querySelector("#username");
+const tweet = document.querySelector("#tweet");
+
+tweetForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const user = username.value;
+  const t = tweet.value;
+
+  console.log(`${user} ${t}`);
+
+  const newLi = document.createElement("li");
+  newLi.innerText = `${user} ${t}`;
+
+  tweetsContainer.append(newLi);
+  tweetForm.reset();
 });
 
-container.addEventListener("click", (e) => {
-  container.classList.toggle("hide");
-});
+tweetsContainer.addEventListener("click", (e) => {
+  // console.log("click on ul"); //printing this on console after clicking on tweet lists
+  // console.log(e); // to check the event fields required.
 
-const makeRandomColor = () => {
-  const r = Math.floor(Math.random() * 255);
-  const g = Math.floor(Math.random() * 255);
-  const b = Math.floor(Math.random() * 255);
-  return `rgb(${r}, ${g}, ${b})`;
-};
+  //to remove newly added tweest upon clicking them
+  // e.target.remove(); // removing all elements li and paragraph too
+
+  // to avoid upper problem of removing only li's
+  e.target.nodeName === "LI" && e.target.remove();
+});
