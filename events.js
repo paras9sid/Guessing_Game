@@ -99,11 +99,11 @@
 // }
 
 // keyboard events
-const btn = document.querySelector("button");
-btn.addEventListener("click", (event) => {
-  console.log(event);
-  // alert("click");
-});
+// const btn = document.querySelector("button");
+// btn.addEventListener("click", (event) => {
+//   console.log(event);
+//   // alert("click");
+// });
 
 // const input = document.querySelector("input");
 // input.addEventListener("keydown", () => {
@@ -136,11 +136,33 @@ btn.addEventListener("click", (event) => {
 // });
 
 //form events
-const form = document.querySelector("#shelterForm");
-form.addEventListener("submit", (e) => {
-  // console.log("Submitted!");
+// const form = document.querySelector("#shelterForm");
+// form.addEventListener("submit", (e) => {
+//   // console.log("Submitted!");
 
-  //preventing default behaviour
-  e.preventDefault();
-  console.log("Submitted!");
+//   //preventing default behaviour
+//   e.preventDefault();
+//   console.log("Submitted!");
+// });
+
+//2
+
+const form = document.querySelector("#shelterForm");
+//extracting data out of input
+const input = document.querySelector("#catName");
+//list calling
+const list = document.querySelector("#cats");
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); //stopping from going to new url in form action
+  // console.log("Submitted!");
+  // console.log(input.value);
+
+  //adding values in list below
+  const catName = input.value;
+  const newLi = document.createElement("LI");
+  newLi.innerText = catName; // input value as text i newLis element created li
+  // console.log(newLi);
+  list.append(newLi); // will insert value of input in li below
+  input.value = ""; //value as empty strng after submission- old value in input box gone
+  console.log(`${catName} not available`);
 });
