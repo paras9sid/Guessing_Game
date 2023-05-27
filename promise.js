@@ -55,24 +55,45 @@ const fakeRequestPromise = (url) => {
 
 //above callback hell into promises conversion
 // const request = fakeRequestPromise("yelp.com/api/coffee");
+// fakeRequestPromise("yelp.com/api/coffee/page1")
+//   .then(() => {
+//     console.log("It worked!!  (1)");
+//     fakeRequestPromise("yelp.com/api/coffee/page2")
+//       .then(() => {
+//         console.log("It worked!!  (2)");
+//         fakeRequestPromise("yelp.com/api/coffee/page3")
+//           .then(() => {
+//             console.log("It worked!!  (3)");
+//           })
+//           .catch(() => {
+//             console.log("Error!!! (3)");
+//           });
+//       })
+//       .catch(() => {
+//         console.log("Error!!! (2)");
+//       });
+//   })
+//   .catch(() => {
+//     console.log("Error!!!  (1)");
+//   });
+
+//above promise converted to short one
 fakeRequestPromise("yelp.com/api/coffee/page1")
-  .then(() => {
+  .then((data) => {
     console.log("It worked!!  (1)");
-    fakeRequestPromise("yelp.com/api/coffee/page2")
-      .then(() => {
-        console.log("It worked!!  (2)");
-        fakeRequestPromise("yelp.com/api/coffee/page3")
-          .then(() => {
-            console.log("It worked!!  (3)");
-          })
-          .catch(() => {
-            console.log("Error!!! (3)");
-          });
-      })
-      .catch(() => {
-        console.log("Error!!! (2)");
-      });
+    console.log(data);
+    return fakeRequestPromise("yelp.com/api/coffee/page2");
   })
+  .then((data) => {
+    console.log("It worked!!  (2)");
+    console.log(data);
+    return fakeRequestPromise("yelp.com/api/coffee/page3");
+  })
+  .then((data) => {
+    console.log("It worked!!  (3)");
+    console.log(data);
+  })
+  // single catch for all above promises
   .catch(() => {
-    console.log("Error!!!  (1)");
+    console.log("Oh no , req falied!!!");
   });
