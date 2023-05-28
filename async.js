@@ -29,19 +29,22 @@
 //   });
 
 //4
-const login = async (username, password) => {
-  if (!username || !password) throw "Missing credentials";
+// const login = async (username, password) => {
+//   if (!username || !password) throw "Missing credentials";
 
-  if (password === "hello") return "Welcome!";
-  throw "Invalid password";
-};
+//   //   if (password === "asda") return "Welcome!";  // error pass doesnt match
+//   if (password === "hello") return "Welcome!"; // success - password match
+//   throw "Invalid password";
+// };
 
-login("asdadada", "hello")
-  .then((msg) => {
-    console.log("Logged in");
-    console.log(msg);
-  })
-  .catch((err) => {
-    console.log("Error");
-    console.log(err);
-  });
+// login("asdadada", "hello")
+//   .then((msg) => {
+//     console.log("Logged in");
+//     console.log(msg);
+//   })
+//   .catch((err) => {
+//     console.log("Error");
+//     console.log(err);
+//   });
+
+//await keyword

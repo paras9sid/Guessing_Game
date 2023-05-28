@@ -135,9 +135,45 @@ const delayedColorChange = (color, delay) => {
   });
 };
 
-delayedColorChange("red", 1000)
-  .then(() => delayedColorChange("orange", 1000))
-  .then(() => delayedColorChange("yellow", 1000))
-  .then(() => delayedColorChange("green", 1000))
-  .then(() => delayedColorChange("blue", 1000))
-  .then(() => delayedColorChange("violet", 1000));
+// delayedColorChange("red", 1000)
+//   .then(() => delayedColorChange("orange", 1000))
+//   .then(() => delayedColorChange("yellow", 1000))
+//   .then(() => delayedColorChange("green", 1000))
+//   .then(() => delayedColorChange("blue", 1000))
+//   .then(() => delayedColorChange("violet", 1000));
+
+//await keyword
+
+// async function rainbow() {
+//   //will print red
+//   // delayedColorChange("red", 1000);
+//   //will print orange in combination with above red promise stmt
+//   // delayedColorChange("orange", 1000);
+
+//   //2
+//   // await delayedColorChange("red", 1000); // will print red first
+//   // delayedColorChange("orange", 1000); // wait for above promise to be fulfilled then print orange
+
+//   //3
+//   //2
+//   await delayedColorChange("red", 1000); // will print red first
+//   // console.log("helo red");
+//   await delayedColorChange("orange", 1000);
+//   await delayedColorChange("yellow", 1000);
+//   await delayedColorChange("blue", 1000);
+//   await delayedColorChange("indigo", 1000);
+//   return "All done!!";
+// }
+
+// // rainbow().then(() => {
+// //   console.log("End of rainbow!!!");
+// // });
+
+// //above stmt with await
+
+// async function printRainbow() {
+//   await rainbow();
+//   console.log("End of rainbow!");
+// }
+
+// printRainbow(); // will excute above function wirtten or else in console haas to call printRainbow(); like this
