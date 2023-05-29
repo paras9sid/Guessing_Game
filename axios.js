@@ -37,7 +37,38 @@
 
 // /dad joke api - appending in html web page ul
 
+// const jokes = document.querySelector("#jokes");
+
+// const dadJoke = async () => {
+//   try {
+//     //creating headers object
+//     const config = {
+//       headers: {
+//         Accept: "application/json",
+//       },
+//     };
+//     const res = await axios.get("https://icanhazdadjoke.com/", config);
+//     // console.log(res);
+//     console.log(res.data.joke);
+//     const newLi = document.createElement("li");
+//     newLi.append(res.data.joke);
+//     jokes.append(newLi);
+//   } catch (e) {
+//     console.log("Error! ", e);
+//   }
+// };
+
+//adding listener
+
 const jokes = document.querySelector("#jokes");
+const button = document.querySelector("button");
+const addNewJoke = async () => {
+  const jokeDad = await dadJoke();
+  console.log(jokeDad);
+  //   const newLi = document.createElement("li");
+  //   newLi.append(res.data.joke);
+  //   jokes.append(newLi);
+};
 
 const dadJoke = async () => {
   try {
@@ -48,12 +79,10 @@ const dadJoke = async () => {
       },
     };
     const res = await axios.get("https://icanhazdadjoke.com/", config);
-    // console.log(res);
-    console.log(res.data.joke);
-    const newLi = document.createElement("li");
-    newLi.append(res.data.joke);
-    jokes.append(newLi);
+    return res.data.joke;
   } catch (e) {
     console.log("Error! ", e);
   }
 };
+
+button.addEventListener("click", addNewJoke);
