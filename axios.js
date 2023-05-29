@@ -64,10 +64,9 @@ const jokes = document.querySelector("#jokes");
 const button = document.querySelector("button");
 const addNewJoke = async () => {
   const jokeDad = await dadJoke();
-  console.log(jokeDad);
-  //   const newLi = document.createElement("li");
-  //   newLi.append(res.data.joke);
-  //   jokes.append(newLi);
+  const newLi = document.createElement("li");
+  newLi.append(jokeDad);
+  jokes.append(newLi);
 };
 
 const dadJoke = async () => {
@@ -79,9 +78,12 @@ const dadJoke = async () => {
       },
     };
     const res = await axios.get("https://icanhazdadjoke.com/", config);
+
+    //if error api
+    // const res = await axios.get("https://asicanhazdadjoke.com/", config);
     return res.data.joke;
   } catch (e) {
-    console.log("Error! ", e);
+    return "Error! No Jokes available!! ";
   }
 };
 
