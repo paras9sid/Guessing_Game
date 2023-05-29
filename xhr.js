@@ -56,25 +56,25 @@
 
 //refactoring using async
 
-const loadStar = async () => {
-  try {
-    // //1st req
-    const res = await fetch("https://swapi.dev/api/people/1");
-    const data = await res.json();
-    console.log(data);
+// const loadStar = async () => {
+//   try {
+//     // //1st req
+//     const res = await fetch("https://swapi.dev/api/people/1");
+//     const data = await res.json();
+//     console.log(data);
 
-    // //1st req - error one
-    // const res = await fetch("https://swapi.dev/api/pedsadasdadople/1");
-    // const data = await res.json();
-    // console.log(data);
+//     // //1st req - error one
+//     // const res = await fetch("https://swapi.dev/api/pedsadasdadople/1");
+//     // const data = await res.json();
+//     // console.log(data);
 
-    //2nd req
-    const res2 = await fetch("https://swapi.dev/api/people/2");
-    const data2 = await res2.json();
-    console.log(data2);
-  } catch (err) {
-    console.log(err);
-  }
-};
+//     //2nd req
+//     const res2 = await fetch("https://swapi.dev/api/people/2");
+//     const data2 = await res2.json();
+//     console.log(data2);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
 
-loadStar();
+// loadStar();
