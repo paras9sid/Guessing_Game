@@ -25,6 +25,14 @@ class Color {
   greet() {
     return `hello from color --> ${this.name}!`;
   }
+  rgb() {
+    //1
+    // return `rgb(${r} ${g} ${b})`; // Uncaught ReferenceError: r is not defined
+
+    //2 this keyword - destructring
+    const { r, g, b } = this;
+    return `rgb(${r} ${g} ${b})`;
+  }
 }
 
 const c1 = new Color(255, 67, 89, "tomato");
